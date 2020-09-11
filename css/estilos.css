@@ -1,3 +1,4 @@
+/*Cargar fuentes*/
 @font-face {
     font-family: "Gill Sans";
     src: url("../fuentes/GillSans-SemiBold.woff2") format("woff2"), url("../fuentes/GillSans-SemiBold.woff") format("woff"), url("../fuentes/GillSans-SemiBold.ttf") format("truetype");
@@ -21,7 +22,7 @@
     font-style: normal;
     font-display: swap;
 }
-
+/*Generales*/
 html {
     font-size: 16px;
 }
@@ -145,15 +146,16 @@ img {
     opacity: 1;
 }
 
-.navbar-toggler:not(.collapsed) .burguer i:first-child, .navbar-toggler:not(.collapsed) .burguer i:last-child {
+.navbar-toggler[aria-expanded="true"] .burguer i:first-child, 
+.navbar-toggler[aria-expanded="true"] .burguer i:last-child {
     opacity: 0;
 }
 
-.navbar-toggler:not(.collapsed) .burguer i:nth-child(2) {
+.navbar-toggler[aria-expanded="true"] .burguer i:nth-child(2) {
     transform: rotate(45deg);
 }
 
-.navbar-toggler:not(.collapsed) .burguer i:nth-child(3) {
+.navbar-toggler[aria-expanded="true"] .burguer i:nth-child(3) {
     transform: rotate(-45deg);
 }
 
@@ -205,19 +207,34 @@ img {
     border-radius: 30px;
     padding: 24px;
 }
-
+a, a:hover {
+    color: #e20613;
+}
+/*Formularios*/
 .form-control {
     background: rgb(245, 245, 245);
     border: none;
     border-radius: 12px;
     padding: 0.375rem 1.25rem;
     transition: all 0.5s ease 0s;
+    margin-bottom: 8px;
 }
 
 .form-control:focus {
     box-shadow: rgb(245, 245, 245) 0px 0px 0px 0.2rem;
 }
-
+.custom-control-input:checked~.custom-control-label::before {
+    color: #fff;
+    border-color: #e20613;
+    background-color: #e20613;
+}
+.custom-control-input:focus~.custom-control-label::before {
+    box-shadow: 0 0 0 0.2rem #f5f5f5;
+}
+.custom-control-input:focus:not(:checked)~.custom-control-label::before {
+    border-color: #e20613;
+}
+/*Textos*/
 h1, h2, h3, h4, h5, h6 {
     color: rgb(226, 6, 19);
 }
@@ -237,7 +254,7 @@ h3 {
 .linea-bt {
     padding-bottom: 1rem;
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .linea-bt::after {
@@ -250,24 +267,52 @@ h3 {
     height: 1px;
     background: rgb(226, 6, 19);
 }
-
-#registro-1 {
+/*
+================
+Particulares
+================
+*/
+/*Registro*/
+#registro-1, #registro-2 {
     background: url("../img/fondo-registro.jpg") center center / cover no-repeat;
 }
 
-#registro-1 .navbar {
+#registro-1 .navbar, #registro-2 .navbar {
     background: transparent;
 }
 
-#registro-1 .bloque {
+#registro-1 .bloque, #registro-2 .bloque {
     max-width: 520px;
     margin: 0px auto;
 }
 
-#registro-1 .bloque form {
-    text-align: center;
+#registro-1 .bloque .btn, #registro-2 .bloque .btn {
+    margin: 2rem auto 1rem;
+    display: block;
 }
-
-#registro-1 .bloque .btn {
-    margin: 2rem 0px 1rem;
+#registro-2 form h3 {
+    margin-top: 24px;
+}
+.proposito {
+    display: flex;
+    justify-content:center;
+    margin-bottom: 1.5rem;
+}
+.check-caja label{
+    border: 2px solid #e20613;
+    width: 120px;
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 12px;
+    color: #e20613;
+    cursor: pointer;
+    margin: 0 6px 0;
+}
+.check-caja input:checked + label{
+    background: #e20613;
+    color: white;
+}
+.check-caja input {
+    opacity: 0;
+    width: 1px;
 }

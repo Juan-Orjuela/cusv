@@ -7,12 +7,51 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Cusezar</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
-
+  <body id="registro-1">
+    <!--Menu-->
+    <nav class="navbar">
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="burguer"><i></i><i></i><i></i><i></i></div>
+        <span>Menú</span>
+      </button>
+      <a class="navbar-brand" href="#"><img src="img/cusezar-logo.svg" alt="Cusezar"></a>
+      <!--Menu replegado-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="inicio.html"><img src="img/menu-inicio.jpg" srcset="img/menu-inicio.jpg 1x, img/menu-inicio@2x.jpg 2x" alt="Inicio"> <span>Inicio</span> </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="mapa.html"><img src="img/menu-mapa.jpg" srcset="img/menu-mapa.jpg 1x, img/menu-mapa@2x.jpg 2x" alt="mapa"> <span>Mapa</span> </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="favoritos.html"><img src="img/menu-favoritos.jpg" srcset="img/menu-favoritos.jpg 1x, img/menu-favoritos@2x.jpg 2x" alt="favoritos"> <span>Favoritos</span> </a>
+          </li>
+        </ul>
+        <a class="btn btn-primary btn-resumen" href="resumen.html">Ver resumen</a>
+      </div>
+    </nav>
+    <!--Contenedor-->
+    <div class="contenedor container">
+      <div class="row">
+        <div class="col">
+          <div class="bloque">
+            <h3 class="linea-bt">ENCUENTRA TU NUEVO HOGAR</h3>
+            <form action="">
+              
+                <input class="form-control" type="email" name="" id="" placeholder="Correo electrónico">
+              
+              <input class="btn btn-primary" type="submit" value="CONTINUAR">
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -22,7 +22,13 @@
     font-style: normal;
     font-display: swap;
 }
+
 /*Generales*/
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html {
     font-size: 16px;
 }
@@ -50,9 +56,24 @@ img {
     letter-spacing: 0.05em;
 }
 
+.btn-alt {
+    color: #e20613;
+    background-color: rgb(255 255 255);
+    border-color: rgb(255 255 255);
+    border-width: 2px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
 .btn-primary:hover {
     color: rgb(226, 6, 19);
     background-color: rgb(255, 255, 255);
+    border-color: rgb(226, 6, 19);
+}
+
+.btn-alt:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(226, 6, 19);
     border-color: rgb(226, 6, 19);
 }
 
@@ -61,6 +82,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .navbar {
@@ -79,7 +101,7 @@ img {
 }
 
 .navbar-brand img {
-    width: 220px;
+    width: 180px;
 }
 
 .navbar-toggler {
@@ -96,8 +118,8 @@ img {
 }
 
 .burguer {
-    width: 60px;
-    height: 60px;
+    width: 36px;
+    height: 36px;
     position: relative;
 }
 
@@ -105,7 +127,7 @@ img {
     display: block;
     background: rgb(254, 246, 159);
     width: 100%;
-    height: 16px;
+    height: 10px;
     position: absolute;
     left: 0px;
 }
@@ -124,7 +146,7 @@ img {
 
 .burguer i:nth-child(2), .burguer i:nth-child(3) {
     top: 50%;
-    margin-top: -8px;
+    margin-top: -5px;
     transition: transform 0.3s linear 0.5s;
 }
 
@@ -146,8 +168,7 @@ img {
     opacity: 1;
 }
 
-.navbar-toggler[aria-expanded="true"] .burguer i:first-child, 
-.navbar-toggler[aria-expanded="true"] .burguer i:last-child {
+.navbar-toggler[aria-expanded="true"] .burguer i:first-child, .navbar-toggler[aria-expanded="true"] .burguer i:last-child {
     opacity: 0;
 }
 
@@ -207,9 +228,11 @@ img {
     border-radius: 30px;
     padding: 24px;
 }
+
 a, a:hover {
     color: #e20613;
 }
+
 /*Formularios*/
 .form-control {
     background: rgb(245, 245, 245);
@@ -223,17 +246,21 @@ a, a:hover {
 .form-control:focus {
     box-shadow: rgb(245, 245, 245) 0px 0px 0px 0.2rem;
 }
+
 .custom-control-input:checked~.custom-control-label::before {
     color: #fff;
     border-color: #e20613;
     background-color: #e20613;
 }
+
 .custom-control-input:focus~.custom-control-label::before {
     box-shadow: 0 0 0 0.2rem #f5f5f5;
 }
+
 .custom-control-input:focus:not(:checked)~.custom-control-label::before {
     border-color: #e20613;
 }
+
 /*Textos*/
 h1, h2, h3, h4, h5, h6 {
     color: rgb(226, 6, 19);
@@ -267,6 +294,7 @@ h3 {
     height: 1px;
     background: rgb(226, 6, 19);
 }
+
 /*
 ================
 Particulares
@@ -290,15 +318,18 @@ Particulares
     margin: 2rem auto 1rem;
     display: block;
 }
+
 #registro-2 form h3 {
     margin-top: 24px;
 }
+
 .proposito {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     margin-bottom: 1.5rem;
 }
-.check-caja label{
+
+.check-caja label {
     border: 2px solid #e20613;
     width: 120px;
     font-size: 1.2rem;
@@ -308,11 +339,174 @@ Particulares
     cursor: pointer;
     margin: 0 6px 0;
 }
-.check-caja input:checked + label{
+
+.check-caja input:checked + label {
     background: #e20613;
     color: white;
 }
+
 .check-caja input {
     opacity: 0;
     width: 1px;
+}
+
+/*Inicio*/
+#inicio #proyectos-destacados {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: gray;
+    overflow: hidden;
+}
+
+#inicio #info-inicio {
+    position: absolute;
+    width: 35%;
+    max-width: 475px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-right: 1px solid white;
+    padding: 40px;
+}
+
+#inicio #info-inicio .bloque-rojo {
+    z-index: 2;
+    position: relative;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#inicio #info-inicio .fondo-rojo {
+    content: "";
+    position: absolute;
+    background: rgb(226, 6, 19);
+    background: linear-gradient(180deg, rgba(226, 6, 19,1) 0%, rgba(97,7,13,1) 100%);
+    left: 40px;
+    right: 40px;
+    top: 40px;
+    bottom: 0;
+    mix-blend-mode: hard-light;
+}
+
+#inicio #info-inicio h1 {
+    background: white;
+    margin-left: -70px;
+    margin-right: -70px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 70px;
+    margin-top: 2.5vh;
+    margin-bottom: 5vh;
+}
+
+#inicio #info-inicio p {
+    color: white;
+}
+
+#inicio #info-inicio .btn {
+    margin: 1.5rem auto 0;
+    display: block;
+    max-width: 140px;
+}
+
+#inicio .slick-slider, .proyecto {
+    position: relative;
+    min-height: 100vh;
+    min-height: calc(100vh - 93px);
+}
+
+#inicio .slick-slider {
+    height: 100vh;
+    height: calc(100vh - 93px);
+}
+
+.proyecto .logo {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 120px;
+}
+
+.proyecto .fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#inicio .slick-next, #inicio .slick-prev {
+    top: initial;
+    left: initial;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background: white url('../img/flecha.svg') 58% center no-repeat;
+    background-size: 15px;
+    border-radius: 100%;
+    bottom: 15px;
+    transition: all .5s ease;
+    position: absolute;
+}
+
+#inicio .slick-next:hover, #inicio .slick-prev:hover {
+    box-shadow: 0 0 0 5px #e20613 ;
+}
+
+#inicio .slick-prev:before, #inicio .slick-next:before {
+    display: none;
+}
+
+#inicio .slick-prev {
+    transform: translateY(-50%) rotate(180deg);
+    transform-origin: 50%;
+}
+
+#inicio .slick-next {
+    right: 40px;
+}
+
+#inicio .slick-prev {
+    right: 110px;
+}
+
+/* Barra progreso */
+.slider-progress {
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    right: 40px;
+    width: 200px;
+    bottom: 120px;
+}
+
+.slider-progress .progress {
+    width: 0%;
+    height: 3px;
+    background: #e20613;
+}
+.custom_paging {
+    position: absolute;
+    bottom: 110px;
+    right: 40px;
+    width: 200px;
+    text-align: right;
+    height: 40px;
+}
+.custom_paging li  {
+    list-style-type: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+.custom_paging li.slick-active {
+     opacity: 1;
 }

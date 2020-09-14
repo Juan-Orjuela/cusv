@@ -267,7 +267,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.75rem;
+    font-size: 3.25rem;
+    font-weight: bold;
 }
 
 h2 {
@@ -294,7 +295,14 @@ h3 {
     height: 1px;
     background: rgb(226, 6, 19);
 }
-
+/*Nav Carrusel*/
+.slick-dots li button:before {
+    color: #000000;
+    font-size: 12px;
+}
+.slick-dots li.slick-active button:before {
+    color: #e20613;
+}
 /*
 ================
 Particulares
@@ -387,7 +395,7 @@ Particulares
     left: 40px;
     right: 40px;
     top: 40px;
-    bottom: 0;
+    bottom: 40px;
     mix-blend-mode: hard-light;
 }
 
@@ -509,4 +517,94 @@ Particulares
 }
 .custom_paging li.slick-active {
      opacity: 1;
+}
+/*Favoritos*/
+.fav {
+    box-shadow: 0 0 30px rgb(0 0 0 / 20%);
+    list-style-type: none;
+    margin: 30px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.fav:focus {
+    outline: none;
+}
+.fav .encabezado {
+    position: relative;
+
+}
+.fav .encabezado > img {
+    border-radius: 20px 20px 0 0;
+}
+.fav .encabezado .nom-fav {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+}
+.fav .encabezado .nom-fav span {
+    display: none;
+}
+.fav .encabezado .fav-ico{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    cursor: pointer;
+
+}
+.fav-ico img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.fav-ico.seleccionado img.relleno {
+    opacity: 1;
+}
+.fav-ico.seleccionado:hover img.relleno {
+    opacity: 0;
+}
+.fav-ico.seleccionado:hover img.cerrar {
+    opacity: 1;
+}
+.fav > h3 {
+    margin: 10px 20px 20px;
+    padding-bottom: 8px;
+    font-size: .875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    border-bottom: 1px solid #e20613;
+}
+.fav > h3 span {
+    font-size: 1.75em;
+    
+}
+.fav .info {
+    padding: 0 20px;
+    line-height: 1.2;
+}
+.fav .info span {
+    display: block;
+}
+.fav .estado {
+    padding: 20px;
+}
+.fav .estado img{
+    height: 30px;
+    width: auto;
+}
+.fav > a {
+    display: block;
+    width: 55%;
+    max-width: 160px;
+    margin: 0 auto;
 }

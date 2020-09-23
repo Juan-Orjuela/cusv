@@ -5,35 +5,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ThemeStarz">
 
-    <!--<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">-->
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
+    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
+    <!-- ESTILOS ZONER SIN USAR        
+     <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
     <link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">-->
+    <!--Estilos mapa rangos-->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
+    <!--Estilos control rangos-->
+    <link rel="stylesheet" href="css/nouislider.min.css">
     <!--Estilos generales-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
     <title>Cusezar</title>
 
 </head>
 
-<body class="page-homepage map-google" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
+<body id="mapa" class="map-google">
     <!-- Wrapper -->
     <div class="wrapper">
-        <!--Menu-->
         <nav class="navbar">
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggle collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <div class="burguer"><i></i><i></i><i></i><i></i></div>
                 <span>Menú</span>
             </button>
             <a class="navbar-brand" href="#"><img src="img/cusezar-logo.svg" alt="Cusezar"></a>
+            <div class="usuario">
+                Hola, <span>Diana</span> <a href="#"><img src="img/cerrar-sesion.svg" alt="Cerrar Sesión"></a>
+            </div>
             <!--Menu replegado-->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -57,109 +60,92 @@
                 <a class="btn btn-primary btn-resumen" href="resumen.html">Ver resumen</a>
             </div>
         </nav>
-        <!-- /Menu -->
-        <div class="contenedor container-fluid">
-            <div class="row">
-                <div class="col">
-                    <!-- Map -->
-            <div id="map"></div>
-            <!-- end Map -->
-            <!-- Search Box -->
-            <div class="search-box-wrapper">
-                <div class="search-box-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-4">
-                                <div class="search-box map">
-                                    <form role="form" id="form-map" class="form-map form-search">
-                                        <h2>Search Your Property</h2>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="search-box-property-id"
-                                                placeholder="Property ID">
-                                        </div>
-                                        <div class="form-group">
-                                            <select name="type">
-                                                <option value="">Status</option>
-                                                <option value="1">Rent</option>
-                                                <option value="2">Sale</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                        <div class="form-group">
-                                            <select name="country">
-                                                <option value="">Country</option>
-                                                <option value="1">France</option>
-                                                <option value="2">Great Britain</option>
-                                                <option value="3">Spain</option>
-                                                <option value="4">Russia</option>
-                                                <option value="5">United States</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                        <div class="form-group">
-                                            <select name="city">
-                                                <option value="">City</option>
-                                                <option value="1">New York</option>
-                                                <option value="2">Los Angeles</option>
-                                                <option value="3">Chicago</option>
-                                                <option value="4">Houston</option>
-                                                <option value="5">Philadelphia</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                        <div class="form-group">
-                                            <select name="district">
-                                                <option value="">District</option>
-                                                <option value="1">Manhattan</option>
-                                                <option value="2">The Bronx</option>
-                                                <option value="3">Brooklyn</option>
-                                                <option value="4">Queens</option>
-                                                <option value="5">Staten Island</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                        <div class="form-group">
-                                            <select name="property-type">
-                                                <option value="">Property Type</option>
-                                                <option value="1">Apartment</option>
-                                                <option value="2">Condominium</option>
-                                                <option value="3">Cottage</option>
-                                                <option value="4">Flat</option>
-                                                <option value="5">House</option>
-                                            </select>
-                                        </div><!-- /.form-group -->
-                                        <div class="form-group">
-                                            <div class="price-range">
-                                                <input id="price-input" type="text" name="price" value="1000;299000">
+        <!--/ Menu-->
+
+
+        <!-- Map -->
+        <div id="map"></div>
+        <!-- end Map -->
+
+        <!-- Search Box -->
+        <div class="search-box-wrapper">
+            <div class="search-box-inner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="">
+                            <div class="search-box map">
+                                <form role="form" id="form-map" class="form-map form-search">
+                                    <h2>Encuentra tu proyecto</h2>
+                                    <div class="campos">
+                                        <div class="form-group cus-check">
+                                            <h3>Plazo de cuota inicial en meses:</h3>
+                                            <div class="form-inline">
+                                                <div class="checkbox"><label><input type="checkbox"> &lt; 12</label>
+                                                </div>
+                                                <div class="checkbox"><label><input type="checkbox">12 a 24</label>
+                                                </div>
+                                                <div class="checkbox"><label><input type="checkbox">&gt; 24</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-default">Search Now</button>
+
                                         </div><!-- /.form-group -->
-                                    </form><!-- /#form-map -->
-                                </div><!-- /.search-box.map -->
-                            </div><!-- /.col-md-3 -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-                </div><!-- /.search-box-inner -->
-            </div>
-            <!-- end Search Box -->
-                </div>
-            </div>
-            
+                                        <div class="form-group cus-rango">
+                                            <h3>Área:</h3>
+                                            <div class="barra" id="rango-area"></div>
+                                            <div class="valores" id="valores-area"></div>
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group cus-check-lg">
+                                            <h3>Habitaciones:</h3>
+                                            <div class="cont-cus-check-lg">
+                                                <div class="check-caja">
+                                                    <input type="checkbox" id="check-1">
+                                                    <label for="check-1">1</a></label>
+                                                </div>
+                                                <div class="check-caja">
+                                                    <input type="checkbox" id="check-2">
+                                                    <label for="check-2">2</a></label>
+                                                </div>
+                                                <div class="check-caja">
+                                                    <input type="checkbox" id="check-3">
+                                                    <label for="check-3">3</a></label>
+                                                </div>
+                                            </div>
+
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group cus-rango">
+                                            <h3>Valor del inmueble:</h3>
+                                            <div class="barra" id="rango-valor"></div>
+                                            <div class="valores" id="valores-valor"></div>
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group cus-check">
+                                            <div class="checkbox"><label><input type="checkbox"> Incluir proyectos
+                                                    finalizados</label></div>
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">BUSCAR</button>
+                                        </div><!-- /.form-group -->
+                                    </div><!-- /.campos -->
+
+                                </form><!-- /#form-map -->
+                            </div><!-- /.search-box.map -->
+                        </div><!-- /.col-md-3 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.search-box-inner -->
         </div>
+        <!-- end Search Box -->
     </div>
 
     <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-    <script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
-    <script type="text/javascript" src="assets/js/infobox.js"></script>
+<!-- SCRIPT MAPA SIN USAR
     <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="assets/js/jquery.placeholder.js"></script>
-    <script type="text/javascript" src="assets/js/icheck.min.js"></script>
+    
     <script type="text/javascript" src="assets/js/jquery.vanillabox-0.1.5.min.js"></script>
     <script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
     <script type="text/javascript" src="assets/js/jshashtable-2.1_src.js"></script>
@@ -168,21 +154,73 @@
     <script type="text/javascript" src="assets/js/jquery.dependClass-0.1.js"></script>
     <script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
     <script type="text/javascript" src="assets/js/jquery.slider.js"></script>
+    
+    -->
+    <script type="text/javascript" src="assets/js/markerwithlabel_packed.js"></script>
+    <script type="text/javascript" src="assets/js/icheck.min.js"></script>
+    <script type="text/javascript" src="assets/js/infobox.js"></script>
     <script type="text/javascript" src="assets/js/markerclusterer_packed.js"></script>
+
     <script type="text/javascript" src="assets/js/custom-map.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
-
+    <!--Control slider Rangos-->
+    <script type="text/javascript" src="js/nouislider.min.js"></script>
+    <script type="text/javascript" src="js/wNumb.min.js"></script>
     <!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
 <![endif]-->
     <script>
-        _latitude = 48.87;
-        _longitude = 2.29;
+        _latitude = 3.750710; 
+        _longitude = -74.929549;
         createHomepageGoogleMap(_latitude, _longitude);
         $(window).load(function () {
             initializeOwl(false);
+        });
+
+        //Control rango Area
+        var sliderarea = document.getElementById('rango-area');
+        noUiSlider.create(sliderarea, {
+            start: [15, 95],
+            step: 5,
+            connect: true,
+            range: {
+                'min': [0],
+                'max': [105]
+            },
+            
+            format: wNumb({
+                decimals: 0,
+                suffix: 'm<sup>2</sup>'
+            })
+        });
+        var rangosarea = document.getElementById('valores-area');
+        sliderarea.noUiSlider.on('update', function (values) {
+            rangosarea.innerHTML = values.join(' - ');
+        });
+        //Control rango Valor
+        var slidervalor = document.getElementById('rango-valor');
+        noUiSlider.create(slidervalor, {
+            start: [100000000, 800000000],
+            step: 5000000,
+            connect: true,
+            range: {
+                'min': [90000000],
+                'max': [900000000]
+            },
+            
+            format: wNumb({
+                decimals: 0,
+                thousand: '.',
+                prefix: '$'
+            })
+        });
+        var rangosvalor = document.getElementById('valores-valor');
+        slidervalor.noUiSlider.on('update', function (values) {
+            rangosvalor.innerHTML = values.join(' - ');
         });
     </script>
 </body>
 
 </html>
+
+

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!-- Plugin secciones -->
+  <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+
+  <!-- Plugin carrusel -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <!-- Plugin carrusel lightbox -->
+  <link rel="stylesheet" href="css/slick-lightbox.css">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <title>Cusezar</title>
+</head>
+
+<body id="arquitectura">
+  <!--Menu-->
+  <nav class="navbar">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="burguer"><i></i><i></i><i></i><i></i></div>
+      <span>Menú</span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="img/cusezar-logo.svg" alt="Cusezar"></a>
+    <div class="usuario">
+      Hola, <span>Diana</span> <a href="#"><img src="img/cerrar-sesion.svg" alt="Cerrar Sesión"></a>
+    </div>
+    <!--Menu replegado-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="inicio.html"><img src="img/menu-inicio.jpg"
+              srcset="img/menu-inicio.jpg 1x, img/menu-inicio@2x.jpg 2x" alt="Inicio"> <span>Inicio</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="mapa.html"><img src="img/menu-mapa.jpg"
+              srcset="img/menu-mapa.jpg 1x, img/menu-mapa@2x.jpg 2x" alt="mapa"> <span>Mapa</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="favoritos.html"><img src="img/menu-favoritos.jpg"
+              srcset="img/menu-favoritos.jpg 1x, img/menu-favoritos@2x.jpg 2x" alt="favoritos"> <span>Favoritos</span>
+          </a>
+        </li>
+      </ul>
+      <a class="btn btn-primary btn-resumen" href="resumen.html">Ver resumen</a>
+    </div>
+  </nav>
+  <!--Contenedor-->
+  <div class="contenedor container-fluid" data-seccion="neutro">
+    <div class="encabezado-arquitectura">
+      <nav class="breadcrumb-cont" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="favoritos.html">Favoritos</a></li>
+          <li class="breadcrumb-item"><a href="proyectos.html">Luar</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Arquitectura</li>
+        </ol>
+      </nav><!-- / .breadcrumb-cont -->
+      <div class="bloque-arquitectura">
+        <h1>Arquitectura</h1>
+        <div class="info">
+          <div class="info-fachadas">
+            <h2>01. Fachadas</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali</p>
+          </div>
+          <div class="info-videos">
+            <h2>02. Videos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali</p>
+            <p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali</p>
+          </div>
+
+          <div class="info-plantas">
+            <h2>03. Plantas</h2>
+            <p>Lorem ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh euismod tincidunt ut laoreet dolore magna ali</p>
+          </div>
+        </div>
+        <ul id="cus-menu">
+          <li data-menuanchor="fachadas" class="active"><a href="#fachadas">01. Fachadas</a></li>
+          <li data-menuanchor="videos"><a href="#videos">02. Videos</a></li>
+          <li data-menuanchor="plantas"><a href="#plantas">03. Plantas</a></li>
+        </ul>
+      </div><!-- / .bloque-arquitectura -->
+    </div><!-- / .encabezado-arquitectura -->
+    <div id="fullpage">
+      <div class="section " id="fachadas-seccion">
+        <div class="grid-galeria">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <ul>
+                  <li><a href="img/arquitectura/galeria-arq-1.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-1.jpg" alt="Pie de página"></a></li>
+                  <li><a href="img/arquitectura/galeria-arq-2.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-2.jpg" alt="Pie de página"></a></li>
+                  <li><a href="img/arquitectura/galeria-arq-3.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-3.jpg" alt="Pie de página"></a></li>
+                  <li><a href="img/arquitectura/galeria-arq-4.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-4.jpg" alt="Pie de página"></a></li>
+                        <li><a href="img/arquitectura/galeria-arq-1.jpg" data-caption="Pie de página"><img
+                          src="img/arquitectura/mini-galeria-arq-1.jpg" alt="Pie de página"></a></li>
+                    <li><a href="img/arquitectura/galeria-arq-2.jpg" data-caption="Pie de página"><img
+                          src="img/arquitectura/mini-galeria-arq-2.jpg" alt="Pie de página"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="section" id="videos-seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <ul class="carrusel">
+                <li>
+                  <div class="video-responsive">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/U6a8O0kIEYE?rel=0"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="plantas-seccion">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <ul class="carrusel carrusel-lightbox">
+                <li><img data-caption="" src="img/arquitectura/planta-gen-1.jpg" alt="Pie de página"></li>
+                <li><img data-caption="Pie de página" src="img/arquitectura/planta-gen-1.jpg" alt="Pie de página"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div><!-- / .contenedor -->
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!-- Plugin secciones -->
+  <link rel="stylesheet" type="text/css" href="css/fullpage.min.css" />
+  <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+  <script type="text/javascript" src="js/fullpage.min.js"></script>
+  <!--Carrusel-->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Carrusel Lightbox-->
+  <script type="text/javascript" src="js/slick-lightbox.min.js"></script>
+
+  <script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+      anchors: ['fachadas', 'videos', 'plantas'],
+      menu: '#cus-menu',
+      fitToSection: false,
+      autoScrolling: false,
+        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+    });
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.grid-galeria').slickLightbox({
+        itemSelector: 'ul > li > a',
+        caption: 'caption'
+      });
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      //Carrusel
+      $slick = $('.carrusel');
+      $slick.slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+
+      });
+      //Carrusel Lightbox
+      $('.carrusel-lightbox').slickLightbox({
+        src: 'src',
+        itemSelector: 'li img',
+        caption: 'caption'
+      });
+      //Fin
+    });
+  </script>
+</body>
+
+</html>

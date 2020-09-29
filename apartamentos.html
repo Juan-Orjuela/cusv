@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!--Carrusel-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+  <!-- Plugin carrusel lightbox -->
+  <link rel="stylesheet" href="css/slick-lightbox.css">
+    <!--Estilos control rangos-->
+    <link rel="stylesheet" href="css/nouislider.min.css">
+
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Cusezar</title>
+</head>
+
+<body class="pag-apartamentos" id="">
+  <!--Menu-->
+  <nav class="navbar">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="burguer"><i></i><i></i><i></i><i></i></div>
+      <span>Menú</span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="img/cusezar-logo.svg" alt="Cusezar"></a>
+
+    <div class="usuario">
+      Hola, <span>Diana</span> <a href="#"><img src="img/cerrar-sesion.svg" alt="Cerrar Sesión"></a>
+    </div>
+    <!--Menu replegado-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="inicio.html"><img src="img/menu-inicio.jpg"
+              srcset="img/menu-inicio.jpg 1x, img/menu-inicio@2x.jpg 2x" alt="Inicio"> <span>Inicio</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="mapa.html"><img src="img/menu-mapa.jpg"
+              srcset="img/menu-mapa.jpg 1x, img/menu-mapa@2x.jpg 2x" alt="mapa"> <span>Mapa</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="favoritos.html"><img src="img/menu-favoritos.jpg"
+              srcset="img/menu-favoritos.jpg 1x, img/menu-favoritos@2x.jpg 2x" alt="favoritos"> <span>Favoritos</span>
+          </a>
+        </li>
+      </ul>
+      <a class="btn btn-primary btn-resumen" href="resumen.html">Ver resumen</a>
+    </div>
+  </nav>
+  <!--Contenedor-->
+  <div class="contenedor container-fluid">
+<div class="row">
+    <div class="col-md-3 col-filtros">
+      <nav class="breadcrumb-cont" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="favoritos.html">Favoritos</a></li>
+          <li class="breadcrumb-item"><a href="proyectos.html">Luar</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Apartamentos</li>
+        </ol>
+      </nav><!-- / .breadcrumb-cont -->
+      <h1 class="linea-bt">Filtros</h1>
+      <form role="form" id="" class="form-filtros">
+
+        <div class="campos">
+          <div class="form-group cus-check-lg">
+            <h3>Habitaciones:</h3>
+            <div class="cont-cus-check-lg">
+              <div class="check-caja">
+                <input type="checkbox" id="check-1">
+                <label for="check-1">1</a></label>
+              </div>
+              <div class="check-caja">
+                <input type="checkbox" id="check-2">
+                <label for="check-2">2</a></label>
+              </div>
+              <div class="check-caja">
+                <input type="checkbox" id="check-3">
+                <label for="check-3">3</a></label>
+              </div>
+            </div>
+          </div><!-- /.form-group -->
+          <div class="form-group cus-check-lg">
+            <h3>Vista:</h3>
+            <select class="custom-select">
+              <option selected>Selecciona una opción</option>
+              <option value="1">Exterior</option>
+              <option value="2">Interior</option>
+              <option value="3">Esquina parque</option>
+            </select>
+          </div><!-- /.form-group -->
+          <div class="form-group cus-rango">
+            <h3>Área:</h3>
+            <div class="barra" id="rango-area"></div>
+            <div class="valores" id="valores-area"></div>
+          </div><!-- /.form-group -->
+
+          <div class="form-group cus-rango">
+            <h3>Valor del inmueble:</h3>
+            <div class="barra" id="rango-valor"></div>
+            <div class="valores" id="valores-valor"></div>
+          </div><!-- /.form-group -->
+          
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">FILTRAR</button>
+          </div><!-- /.form-group -->
+        </div><!-- /.campos -->
+
+      </form><!-- /#form-map -->
+    </div> <!-- / .col-filtros -->
+    <div class="col-md-9 col-resultados">
+      <div class="caja-centrar">
+        <ul class="carru-res">
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          <!--Apartamento-->
+          <li class="ficha-resumen">
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <a href="img/plantas/planta-luar-apto-1.jpg" data-caption="Planta LUAR Apartamento Tipo 1">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </a>
+              
+            </div>
+  
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <a class="btn btn-primary" href="apartamento-detalle.html">VER MÁS</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!--Carrusel-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--Carrusel Lightbox-->
+  <script type="text/javascript" src="js/slick-lightbox.min.js"></script>
+  <!--Control slider Rangos-->
+  <script type="text/javascript" src="js/nouislider.min.js"></script>
+  <script type="text/javascript" src="js/wNumb.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //Carrusel
+      $slick = $('.carru-res');
+      $slick.slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+
+      });
+      //Carrusel Lightbox
+      $slick.slickLightbox({
+        itemSelector: '.planta a',
+        caption: 'caption'
+      });
+      //Fin
+      
+    });
+  </script>
+  <script>
+    //Control rango Area
+    var sliderarea = document.getElementById('rango-area');
+    noUiSlider.create(sliderarea, {
+        start: [15, 95],
+        step: 5,
+        connect: true,
+        range: {
+            'min': [0],
+            'max': [105]
+        },
+        
+        format: wNumb({
+            decimals: 0,
+            suffix: 'm<sup>2</sup>'
+        })
+    });
+    var rangosarea = document.getElementById('valores-area');
+    sliderarea.noUiSlider.on('update', function (values) {
+        rangosarea.innerHTML = values.join(' - ');
+    });
+    //Control rango Valor
+    var slidervalor = document.getElementById('rango-valor');
+    noUiSlider.create(slidervalor, {
+        start: [100000000, 800000000],
+        step: 5000000,
+        connect: true,
+        range: {
+            'min': [90000000],
+            'max': [900000000]
+        },
+        
+        format: wNumb({
+            decimals: 0,
+            thousand: '.',
+            prefix: '$'
+        })
+    });
+    var rangosvalor = document.getElementById('valores-valor');
+    slidervalor.noUiSlider.on('update', function (values) {
+        rangosvalor.innerHTML = values.join(' - ');
+    });
+</script>
+</body>
+
+</html>

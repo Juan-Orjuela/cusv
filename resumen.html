@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!--Carrusel-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Cusezar</title>
+</head>
+
+<body id="resumen">
+  <!--Menu-->
+  <nav class="navbar">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="burguer"><i></i><i></i><i></i><i></i></div>
+      <span>Menú</span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="img/cusezar-logo.svg" alt="Cusezar"></a>
+
+    <div class="usuario">
+      Hola, <span>Diana</span> <a href="#"><img src="img/cerrar-sesion.svg" alt="Cerrar Sesión"></a>
+    </div>
+    <!--Menu replegado-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="inicio.html"><img src="img/menu-inicio.jpg"
+              srcset="img/menu-inicio.jpg 1x, img/menu-inicio@2x.jpg 2x" alt="Inicio"> <span>Inicio</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="mapa.html"><img src="img/menu-mapa.jpg"
+              srcset="img/menu-mapa.jpg 1x, img/menu-mapa@2x.jpg 2x" alt="mapa"> <span>Mapa</span> </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="favoritos.html"><img src="img/menu-favoritos.jpg"
+              srcset="img/menu-favoritos.jpg 1x, img/menu-favoritos@2x.jpg 2x" alt="favoritos"> <span>Favoritos</span>
+          </a>
+        </li>
+      </ul>
+      <a class="btn btn-primary btn-resumen" href="resumen.html">Ver resumen</a>
+    </div>
+  </nav>
+  <!--Contenedor-->
+  <div class="contenedor container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1 class="linea-bt">Resumen</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-izq">
+        <div class="info-resumen">
+          <div class="row">
+            <div class="col">
+              <h3>Lo quiero para:</h3>
+              <span class="tag">Vivienda</span><span class="tag">Inversión</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3>Plazo de cuota inicial en meses:</h3>
+              <span class="tag">&lt; 12</span><span class="tag">12 a 24</span><span class="tag">&gt; 24</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-7">
+              <h3>Área:</h3><span class="tag">45.55 m<sup>2</sup> - 53.05 m<sup>2</sup></span>
+            </div>
+            <div class="col-5">
+              <h3>Habitaciones:</h3>
+              <span class="tag">1</span>
+              <span class="tag">2</span>
+              <span class="tag">3</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h3>Valor:</h3>
+            <span class="tag">$265.000.000 - $293.500.000 <small>COP</small></span>
+            </div>
+          </div>
+        </div>
+        <!--Formulario asesor-->
+        <form action="">
+          <input class="form-control" type="text" name="" id="" placeholder="Nombre">
+          <input class="form-control"  type="email" name="" id="" placeholder="Correo">
+          <input class="form-control" type="tel" name="" id="" placeholder="Celular">
+          <textarea name="" id="" cols="30" rows="4" class="form-control" placeholder="Comentarios"></textarea>
+        <input class="btn btn-primary" type="submit" value="ENVIAR">
+      </form>
+      </div>
+      <div class="col-md-9">
+        <ul class="carru-res">
+           <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+          <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+          <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+          <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+          <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+          <!--Proyecto-->
+          <li class="ficha-resumen">
+            <i class="fav-ico seleccionado">
+              <img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">
+              <img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">
+              <img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">
+            </i>
+            <div class="encabezado">
+              <h3 class="proy-res">
+                <img src="img/logo-luar.png" alt="LUAR"><span>LUAR</span>
+              </h3>
+              <div class="ubi">
+                <span class="ubicacion">Salitre - Bogotá</span>
+                <span class="direccion">Cra 70A # 30 - 10</span>
+              </div>
+            </div>
+            <h2 class="linea-bt">Apartamento Tipo 1</h2>
+            <div class="planta">
+              <img src="img/plantas/mini-planta-luar.jpg" alt="LUAR Apartamento Tipo 1 miniatura">
+            </div>
+            
+            <ul class="areas linea-bt">
+              <li>Área construida: 45.43 m<sup>2</sup></li>
+              <li>Área privada: 44.43 m<sup>2</sup></li>
+            </ul>
+            <div class="valor">
+              <span>DESDE</span>
+              <span>$253.780.000 <small>COP</small></span>
+            </div>
+            <div class="plazo">Plazo de cuota inicial: 15 meses</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <!--Carrusel-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      //Carrusel
+      $slick = $('.carru-res');
+      $slick.slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+
+      });
+      //Fin
+    });
+  </script>
+</body>
+
+</html>

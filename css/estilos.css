@@ -1638,9 +1638,13 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     flex-grow: 2;
     display: flex;
     flex-direction: column;
+    align-items:center;
     justify-content: center;
 }
-
+.pag-apartamentos .col-filtros .form-filtros .campos {
+    width: 300px;
+    max-width: 100%;
+}
 .pag-apartamentos .contenedor {
     justify-content: stretch
 }

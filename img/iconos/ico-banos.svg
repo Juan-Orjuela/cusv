@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_289" data-name="Rectángulo 289" width="33.7" height="28.3" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ico-banos" transform="translate(2865 -11724)">
+    <g id="Ilustración_2" data-name="Ilustración 2" transform="translate(-2840.15 11749.15)">
+      <g id="Grupo_220" data-name="Grupo 220" transform="translate(-16.85 -14.15)" clip-path="url(#clip-path)">
+        <path id="Trazado_86" data-name="Trazado 86" d="M33.2,14.2H6V13.1a.5.5,0,0,0-.5-.5H4.9V10.9H6v.5a.55.55,0,1,0,1.1,0V9.3A.55.55,0,1,0,6,9.3v.5H4.9V3.3A2.2,2.2,0,0,1,7.1,1.1H9.3a2.2,2.2,0,0,1,2.2,2.2h0A3.3,3.3,0,0,0,8.7,6.5a.5.5,0,0,0,.5.5h5.4a.5.5,0,0,0,.5-.5,3.3,3.3,0,0,0-2.7-3.2h0A3.3,3.3,0,0,0,9.3,0H7.1A3.3,3.3,0,0,0,3.8,3.3v9.3H3.3a.5.5,0,0,0-.5.5v1.1H.5a.5.5,0,0,0-.5.5v1.6a.5.5,0,0,0,.5.5H2.2v6.5a3.3,3.3,0,0,0,2.7,3.2v1.1a.55.55,0,0,0,1.1,0v-.9H27.8v1.1a.55.55,0,0,0,1.1,0V26.6a3.3,3.3,0,0,0,2.7-3.2V16.9h1.6a.5.5,0,0,0,.5-.5V14.7a.5.5,0,0,0-.5-.5M12,4.4A2.2,2.2,0,0,1,14.1,6H9.9A2.2,2.2,0,0,1,12,4.4M3.8,13.6H4.9v.5H3.8Zm26.7,9.8a2.2,2.2,0,0,1-2.2,2.2H5.4a2.2,2.2,0,0,1-2.2-2.2V16.9H30.5Zm2.2-7.6H1.1v-.5H32.7Z" fill="#e20613"/>
+        <path id="Trazado_87" data-name="Trazado 87" d="M4.9,19H9.3a.55.55,0,0,0,0-1.1H4.9a.55.55,0,1,0,0,1.1" fill="#e20613"/>
+        <path id="Trazado_88" data-name="Trazado 88" d="M10.9,19h.5a.55.55,0,0,0,0-1.1h-.5a.55.55,0,1,0,0,1.1" fill="#e20613"/>
+      </g>
+    </g>
+    <rect id="Rectángulo_816" data-name="Rectángulo 816" width="50" height="50" transform="translate(-2865 11724)" fill="none" opacity="0.53"/>
+  </g>
+</svg>

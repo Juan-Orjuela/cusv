@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_303" data-name="Rectángulo 303" width="32" height="32" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ico-zona-lavado" transform="translate(2773 -11805)">
+    <g id="Ilustración_6" data-name="Ilustración 6" transform="translate(-2748 11830)">
+      <g id="Grupo_228" data-name="Grupo 228" transform="translate(-16 -16)">
+        <rect id="Rectángulo_298" data-name="Rectángulo 298" width="0.9" height="10.44" transform="translate(7.6 11.3)" fill="#e20613"/>
+        <path id="Trazado_114" data-name="Trazado 114" d="M8.6,2.8H31.1V7.5H8.6ZM10.2.9H29.5l.9.9H9.2ZM9.8,0,7.6,2.2v8.2h.9v-2H31.1V29.2H26.8v.9h3.6l-.9.9H12.3v1H29.9L32,29.9V2.2L29.9,0Z" fill="#e20613"/>
+        <g id="Grupo_227" data-name="Grupo 227" clip-path="url(#clip-path)">
+          <path id="Trazado_115" data-name="Trazado 115" d="M11.5,19.7a8.3,8.3,0,1,0,8.3-8.3,8.3,8.3,0,0,0-8.3,8.3m15.6,0a7.3,7.3,0,1,1-7.3-7.3,7.4,7.4,0,0,1,7.3,7.3" fill="#e20613"/>
+          <path id="Trazado_116" data-name="Trazado 116" d="M13.4,19.7A6.4,6.4,0,0,0,24,24.6l-.6-.7a5.5,5.5,0,0,1-9-4.2v-.5h4.3l1.9,1.9h4.5A5.5,5.5,0,0,1,24,23.3l.7.6a6.4,6.4,0,1,0-11.3-4.2m11.7-1.4H21.9v.9h3.3v1H20.9L19,18.3H14.5a5.5,5.5,0,0,1,10.6,0" fill="#e20613"/>
+          <path id="Trazado_117" data-name="Trazado 117" d="M28.7,3.7a1.4,1.4,0,1,0,1.4,1.4,1.4,1.4,0,0,0-1.4-1.4m0,1.9a.5.5,0,1,1,.5-.5.5.5,0,0,1-.5.5" fill="#e20613"/>
+          <path id="Trazado_118" data-name="Trazado 118" d="M25,3.7a1.4,1.4,0,1,0,1.4,1.4A1.4,1.4,0,0,0,25,3.7m0,1.9a.5.5,0,1,1,.5-.5.5.5,0,0,1-.5.5" fill="#e20613"/>
+          <path id="Trazado_119" data-name="Trazado 119" d="M21.2,3.7a1.4,1.4,0,1,0,1.4,1.4,1.4,1.4,0,0,0-1.4-1.4m0,1.9a.5.5,0,1,1,.5-.5.5.5,0,0,1-.5.5" fill="#e20613"/>
+          <path id="Trazado_120" data-name="Trazado 120" d="M9.5,6.6h6.6V3.7H9.5Zm.9-1.9h4.7v.9H10.4Z" fill="#e20613"/>
+          <path id="Trazado_121" data-name="Trazado 121" d="M1.2,22.6,0,23.8v1.3l.7.7-.7.7V28l.7.7-.7.7v1.3L1.2,32h9l1.2-1.2V29.5l-.7-.7.7-.7V26.6l-.7-.7.7-.7V23.8l-1.2-1.2Zm9.2,7.8-.7.7H1.6l-.7-.7v-.6l.7-.7H3.3v-.9H1.6l-.7-.7V27l.7-.7H9.8l.7.7v.6l-.7.7H4.2v.9H9.8l.7.7Zm0-5.6-.7.7H1.6l-.7-.7v-.5l.7-.7H9.8l.7.7Z" fill="#e20613"/>
+          <rect id="Rectángulo_299" data-name="Rectángulo 299" width="0.9" height="0.94" transform="translate(14.2 29.7)" fill="#e20613"/>
+          <rect id="Rectángulo_300" data-name="Rectángulo 300" width="0.9" height="0.94" transform="translate(24.5 9.4)" fill="#e20613"/>
+          <rect id="Rectángulo_301" data-name="Rectángulo 301" width="0.9" height="0.94" transform="translate(12.3 29.7)" fill="#e20613"/>
+          <rect id="Rectángulo_302" data-name="Rectángulo 302" width="3.8" height="0.94" transform="translate(26.4 9.4)" fill="#e20613"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectángulo_820" data-name="Rectángulo 820" width="50" height="50" transform="translate(-2773 11805)" fill="none" opacity="0.53"/>
+  </g>
+</svg>

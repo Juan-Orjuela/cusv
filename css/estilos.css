@@ -78,7 +78,7 @@ img {
     border-color: rgb(255 255 255);
 }
 
-.contenedor {
+.contenedor, .contenedor-info {
     min-height: calc(100vh - 93px);
     display: flex;
     flex-direction: column;
@@ -422,7 +422,7 @@ Particulares
     left: 40px;
     right: 40px;
     top: 40px;
-    bottom: 40px;
+    bottom: 300px;
     mix-blend-mode: hard-light;
 }
 
@@ -1197,7 +1197,8 @@ body#ubicacion .bloque-ubicacion ul {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #dfdfe8;
+    background: url('../img/mapa-ejemplo.png');
+    background-size: cover;
     left: 0;
     top: 0;
     z-index: 1;
@@ -1519,7 +1520,9 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     cursor: pointer;
     z-index: 2;
 }
-
+.fav-ico {
+    cursor: pointer;
+}
 .fav-ico img {
     position: absolute;
     top: 50%;
@@ -1540,7 +1543,15 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
 .fav-ico.seleccionado:hover img.cerrar {
     opacity: 1;
 }
-
+.fav-ico:not(.seleccionado) img.linea {
+     opacity: 1;
+}
+.fav-ico:not(.seleccionado):hover img.linea {
+     opacity: 0;
+}
+.fav-ico:not(.seleccionado):hover img.relleno {
+     opacity: 1;
+}
 .ficha-resumen ul {
     list-style: none;
     padding-left: 15px;
@@ -1638,13 +1649,15 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     flex-grow: 2;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
+
 .pag-apartamentos .col-filtros .form-filtros .campos {
     width: 300px;
     max-width: 100%;
 }
+
 .pag-apartamentos .contenedor {
     justify-content: stretch
 }
@@ -1679,30 +1692,316 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     transition: all 0.5s ease 0s;
     margin-bottom: 8px;
 }
+
 .custom-select:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 6%);
 }
+
 .pag-apartamentos .ficha-resumen .btn {
     margin: 1rem auto 0;
     display: block;
     max-width: 140px;
 }
+
 .pag-apartamentos .col-resultados {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .pag-apartamentos .ficha-resumen .planta {
-     overflow: hidden;
+    overflow: hidden;
 }
+
 .pag-apartamentos .ficha-resumen .planta a {
     display: block;
-   
 }
+
 .pag-apartamentos .ficha-resumen .planta img {
     transition: all .5s ease;
 }
+
 .pag-apartamentos .ficha-resumen .planta a:hover img {
     transform: scale(1.1)
+}
+
+/*Apto Detallle*/
+.apto-detalle .encabezado-apto {
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    top: 40px;
+    
+}
+
+.apto-detalle .encabezado-apto .fav-ico {
+    position: fixed;
+    right: 20px;
+    top: 108px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgb(0 0 0 / .3);
+    background: white;
+}
+.apto-detalle .contenedor {
+    margin-top: 93px;
+}
+.apto-detalle #seccion-1 {
+    min-height: calc(100vh - 93px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+}
+.apto-detalle #seccion-1 >.row > * {
+    padding: 0;
+}
+.apto-detalle .info-principal {
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 25px;
+    margin-top: 90px;
+}
+
+.apto-detalle .info-principal .head-proyecto {
+    display: flex;
+    align-items: center;
+}
+
+.apto-detalle .info-principal .head-proyecto img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.apto-detalle .info-principal .head-proyecto h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.apto-detalle h1 {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    border-bottom: 1px solid #e20613;
+    padding-bottom: .5rem;
+}
+
+.apto-detalle .caracteristicas {
+    padding: 0;
+    margin: 0
+}
+
+.apto-detalle .caracteristicas li {
+    list-style: none;
+    height: 45px;
+    margin-bottom: 0;
+    line-height: 45px;
+    padding-left: 55px;
+    position: relative;
+}
+.apto-detalle .caracteristicas li:after {
+    content: "";
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 0 ;
+    left: 0;
+
+    background-position: center;
+    background-size: contain;
+}
+.apto-detalle .caracteristicas li.habitaciones:after {
+    background-image: url('../img/iconos/ico-habitaciones.svg')
+}
+.apto-detalle .caracteristicas li.banos:after {
+    background-image: url('../img/iconos/ico-banos.svg')
+}
+.apto-detalle .caracteristicas li.parqueaderos:after {
+    background-image: url('../img/iconos/ico-parqueaderos.svg')
+}
+.apto-detalle .caracteristicas li.deposito:after {
+    background-image: url('../img/iconos/ico-deposito.svg')
+}
+.apto-detalle .caracteristicas li.estudio:after {
+    background-image: url('../img/iconos/ico-estudio.svg')
+}
+.apto-detalle .caracteristicas li.lavado:after {
+    background-image: url('../img/iconos/ico-lavado.svg')
+}
+.apto-detalle .caracteristicas li.ampliacion:after {
+    background-image: url('../img/iconos/ico-ampliacion.svg')
+}
+.apto-detalle  .menu-interno ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.apto-detalle  .menu-interno li {
+    list-style: none;
+    width: 30%;
+
+}
+.apto-detalle  .menu-interno li a {
+    display: block;
+    border: 2px solid #e20613;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+.apto-detalle  .menu-interno li a:hover {
+    text-decoration: none;
+    background: #e20613;
+    color: white;
+}
+.apto-detalle  .tipos-planta {
+    padding: 0;
+}
+.apto-detalle .info-der .areas {
+    margin-top: 90px;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #999999;
+}
+.apto-detalle .areas-fijas {
+    margin-bottom: 1rem;
+}
+.apto-detalle .areas-fijas,
+.apto-detalle .areas-opcionales {
+    display: flex;
+}
+.apto-detalle .areas-fijas > div,
+.apto-detalle .areas-opcionales > div {
+    width: 45%;
+}
+.apto-detalle .areas-fijas > div:first-child,
+.apto-detalle .areas-opcionales > div:first-child {
+   margin-right: 10%;
+}
+.apto-detalle .areas-fijas h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+.apto-detalle .areas-opcionales h4 {
+    font-size: .875rem;
+    font-weight: bold;
+    margin: 0;
+}
+.apto-detalle .cifra {
+    font-size: 2rem;
+}
+.apto-detalle .opciones {
+    font-size: .875rem;
+    line-height: 1;
+    margin-top: 1em;
+}
+.apto-detalle .plantas-piso {
+    margin: 0 0 2rem;
+    padding: 0;
+}
+.apto-detalle .btn-planta-proyecto a{
+    font-size: .875rem;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #585858;
+}
+.apto-detalle .btn-planta-proyecto img {
+    width: 40px;
+    position: relative;
+    top: -4px;
+}
+.apto-detalle .btn-planta-proyecto a:hover {
+    text-decoration: none;
+    color: #e20613;
+
+}
+
+.apto-detalle .tipos-planta img {
+    width: auto;
+    margin: 0 auto;
+    max-height: calc(100vh - 190px);
+}
+.apto-detalle .flecha-bajar {
+    margin: 0 auto;
+    transition: opacity .5s ease;
+}
+.apto-detalle .flecha-bajar img {
+    width: 50px;
+}
+.apto-detalle .flecha-bajar:hover {
+    opacity: .8;
+}
+.apto-detalle #galeria h3,
+.apto-detalle #video h3,
+.apto-detalle #recorrido h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.apto-detalle #galeria h3:after,
+.apto-detalle #video h3:after,
+.apto-detalle #recorrido h3:after {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+    width: 180px;
+    height: 1px;
+    background: rgb(226, 6, 19);
+}
+.apto-detalle #galeria,
+.apto-detalle #video,
+.apto-detalle #recorrido {
+    padding: 100px 0;
+}
+.apto-detalle .carrusel-galeria {
+    padding: 0;
+}
+.apto-detalle .carrusel-galeria li {
+    margin: 0 10px;
+    outline: none;
+}
+.apto-detalle .carrusel-galeria li a:focus {
+    outline: none;
+}
+.apto-detalle .carrusel-galeria li img {
+    border-radius: 24px;
+}
+.apto-detalle .carru-res {
+    padding: 0;
+    display: flex;
+    justify-content:space-between
+}
+.apto-detalle .carru-res > li {
+    width: 30%;
+}
+.apto-detalle .carru-res > li .btn-primary {
+    margin: 1.2rem auto 0;
+    display: block;
+    max-width: 180px;
+}
+.apto-detalle #final {
+    border-top: 1px solid #999999;
+    padding: 30px;
+    text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+.apto-detalle .navbar {
+    position: fixed;
+    width: 100%;
+    z-index:999;
+    top: 0;
 }

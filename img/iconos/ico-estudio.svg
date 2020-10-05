@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_291" data-name="Rectángulo 291" width="34.2" height="30.88" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ico-estudio" transform="translate(2865 -11805)">
+    <g id="Ilustración_4" data-name="Ilustración 4" transform="translate(-2839.9 11830.44)">
+      <g id="Grupo_222" data-name="Grupo 222" transform="translate(-17.1 -15.44)" clip-path="url(#clip-path)">
+        <path id="Trazado_92" data-name="Trazado 92" d="M33.6,12.1H32V5a.6.6,0,0,0-.6-.6H24.8a.6.6,0,0,0-.5.6v7.2h-10L13.9,11h4a1.9,1.9,0,0,0,1.9-1.9V1.9A1.9,1.9,0,0,0,17.9,0H4.1A1.9,1.9,0,0,0,2.2,1.9V9.1A1.9,1.9,0,0,0,4.1,11h4l-.3,1.1H.6a.6.6,0,0,0-.6.6V30.3a.6.6,0,0,0,.6.6H2.2a.6.6,0,0,0,.6-.6V19.9H19.9V30.3a.6.6,0,0,0,.6.6h1.7a.6.6,0,0,0,.6-.6V28.7h8.8v1.7a.6.6,0,0,0,.6.6h1.7a.6.6,0,0,0,.6-.6V12.7a.6.6,0,0,0-.6-.6m-5-6.6h2.2v6.6H28.7Zm-3.3,0h2.2v6.6H25.4ZM3.3,1.9a.8.8,0,0,1,.8-.8H17.9a.8.8,0,0,1,.8.8V8.3H3.3Zm.8,8a.8.8,0,0,1-.8-.6H18.7a.8.8,0,0,1-.8.6ZM13,12.1H9L9.3,11h3.6ZM1.7,29.8H1.1V15.4h.6Zm18.2-11H2.8V15.4H19.9Zm1.7,11H21V15.4h.6Zm9.9-2.2H22.6V24.3h8.8Zm0-4.4H22.6V19.9h8.8Zm0-4.4H22.6V15.4h8.8Zm1.7,11h-.6V15.4h.6Zm0-15.4H1.1V13.2h32Z" fill="#e20613"/>
+        <path id="Trazado_93" data-name="Trazado 93" d="M25.4,17.6h3.3a.6.6,0,0,0,0-1.1H25.4a.6.6,0,1,0,0,1.1" fill="#e20613"/>
+        <path id="Trazado_94" data-name="Trazado 94" d="M28.7,21H25.4a.6.6,0,0,0,0,1.1h3.3a.6.6,0,1,0,0-1.1" fill="#e20613"/>
+        <path id="Trazado_95" data-name="Trazado 95" d="M28.7,25.4H25.4a.6.6,0,0,0,0,1.1h3.3a.6.6,0,1,0,0-1.1" fill="#e20613"/>
+        <path id="Trazado_96" data-name="Trazado 96" d="M12.7,16.5H9.4a.6.6,0,0,0,0,1.1h3.3a.6.6,0,0,0,0-1.1" fill="#e20613"/>
+      </g>
+    </g>
+    <rect id="Rectángulo_819" data-name="Rectángulo 819" width="50" height="50" transform="translate(-2865 11805)" fill="none" opacity="0.53"/>
+  </g>
+</svg>

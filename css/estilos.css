@@ -2005,3 +2005,17 @@ html {
     z-index:999;
     top: 0;
 }
+
+.apto-detalle .cont-planta-piso h5{
+    border-top: 1px solid #999999;
+    padding-top: 1rem;
+    font-weight: bold;
+    color:#575757;
+    font-size: 1rem;
+}
+.apto-detalle .btn-planta-proyecto {
+    border-top: 1px solid #999999;
+}
+.slick-slide *:focus {
+    outline: none;
+}

@@ -582,7 +582,8 @@ Particulares
     display: none;
 }
 
-.fav .encabezado .fav-ico {
+.fav .encabezado .fav-ico,
+.cus-box-info .fav-ico {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -593,7 +594,10 @@ Particulares
     box-shadow: 0 0 10px rgb(0 0 0 / 20%);
     cursor: pointer;
 }
-
+.cus-box-info .fav-ico {
+    top: initial;
+    bottom: 10px;
+}
 .fav-ico img {
     position: absolute;
     top: 50%;
@@ -1091,7 +1095,7 @@ Particulares
 }
 
 .cus-box-info {
-    padding: 10px;
+    padding: 10px 10px 40px;
 }
 
 .cus-box-info .valor {

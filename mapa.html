@@ -219,6 +219,12 @@
             rangosvalor.innerHTML = values.join(' - ');
         });
     </script>
+    <script>
+        $('#map').on('click', '.fav-ico', function(){
+            console.log(this);
+            $(this).toggleClass('seleccionado');
+        })
+    </script>
 </body>
 
 </html>

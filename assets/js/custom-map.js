@@ -63,6 +63,11 @@ function createHomepageGoogleMap(_latitude,_longitude){
                                 '<div class="ubicacion"><span class="ciudad">' + locations[i][9] + '</span> - <span class="sector">' + locations[i][10] + '</span></div>'+
                                 '<div class="direccion">' + locations[i][11] + '</div>'+
                                 '<div class="estado"><img src="' + locations[i][12] + '" alt=""></div>'+
+                                '<i class="fav-ico">'+
+                                '<img class="linea" src="img/corazon-linea.svg" alt="Corazón Línea">'+
+                                '<img class="relleno" src="img/corazon-relleno.svg" alt="Corazón Relleno">'+
+                                '<img class="cerrar" src="img/corazon-cerrar.svg" alt="Cerrar">'+
+                              '</i>'+
                             '</div>'+
 
 

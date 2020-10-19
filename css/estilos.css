@@ -1241,6 +1241,11 @@ body#ubicacion .bloque-ubicacion ul {
     margin: 0 !important;
     transform: translate(-50%, -120%)
 }
+#mapa-ubicacion .marker-style,
+#mapa-ubicacion .marker-style ~ div {
+    pointer-events: none !important;
+    cursor: initial !important;
+}
 #mapa-ubicacion .marker-style img {
     width: 100%;
 }

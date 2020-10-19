@@ -51,7 +51,7 @@ function createHomepageGoogleMap(_latitude,_longitude){
                 boxText.innerHTML = '<span></span>';
                         //Fin nuevo infor box
                 //Define the infobox
-                newMarkers[i].infobox = new InfoBox(infoboxOptions);
+                /*newMarkers[i].infobox = new InfoBox(infoboxOptions);
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
                         for (h = 0; h < newMarkers.length; h++) {
@@ -59,7 +59,7 @@ function createHomepageGoogleMap(_latitude,_longitude){
                         }
                         newMarkers[i].infobox.open(map, this);
                     }
-                })(marker, i));
+                })(marker, i));*/
 
             }
             var clusterStyles = [

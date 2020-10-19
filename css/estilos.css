@@ -867,7 +867,30 @@ Particulares
 #mapa #map {
     height: calc(100vh - 93px) !important;
 }
-
+#mapa .btn-favoritos {
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    right: 20px;
+    background-color: #e20613;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    pointer-events: none
+}
+#mapa .btn-favoritos.activo {
+    opacity: 1;
+    pointer-events: initial
+}
+#mapa .btn-favoritos:hover {
+    background-color: white;
+    color: #e20613;
+}
+#mapa .gm-bundled-control {
+    top: 40% !important;
+    bottom: initial !important;
+}
 /*Filtro mapa*/
 #form-map {
     background: white;
@@ -1142,7 +1165,7 @@ Particulares
     box-shadow: 0 0 15px rgb(0 0 0 / 0.6);
 }
 
-.marker-style img {
+#map .marker-style img {
     width: 60%;
 }
 
@@ -1156,6 +1179,7 @@ body#ubicacion .encabezado-ubicacion {
     margin-top: 40px;
     position: relative;
     z-index: 2;
+    max-width: 380px
 }
 
 body#ubicacion .bloque-ubicacion {
@@ -1198,16 +1222,28 @@ body#ubicacion .bloque-ubicacion ul {
 }
 
 #mapa-ubicacion {
-    position: absolute;
+    position: absolute !important;
     width: 100%;
     height: 100%;
-    background: url('../img/mapa-ejemplo.png');
+    max-height: calc(100vh - 93px);
     background-size: cover;
     left: 0;
     top: 0;
     z-index: 1;
 }
-
+#mapa-ubicacion .marker-style {
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    transform: translate(-50%, -120%)
+}
+#mapa-ubicacion .marker-style img {
+    width: 100%;
+}
 /*Arquitectura - Zonas*/
 body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
     position: fixed;

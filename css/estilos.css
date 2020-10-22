@@ -405,6 +405,7 @@ Particulares
     left: 0;
     border-right: 1px solid white;
     padding: 40px;
+    display: flex;
 }
 
 #inicio #info-inicio .bloque-rojo {
@@ -412,6 +413,9 @@ Particulares
     position: relative;
     padding: 30px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #inicio #info-inicio .fondo-rojo {
@@ -422,7 +426,7 @@ Particulares
     left: 40px;
     right: 40px;
     top: 40px;
-    bottom: 300px;
+    bottom: 40px;
     mix-blend-mode: hard-light;
 }
 
@@ -446,6 +450,7 @@ Particulares
     margin: 1.5rem auto 0;
     display: block;
     max-width: 140px;
+    justify-content: flex-end
 }
 
 #inicio .slick-slider, .proyecto {
@@ -1366,8 +1371,15 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     display: block;
     border-radius: 8%;
     overflow: hidden;
+    position: relative;
+    padding: 50% 0;
 }
+.grid-galeria ul li a img {
+    position: absolute;
+    top: 0;
+    left: 0;
 
+}
 .grid-galeria ul li a:hover {
     box-shadow: 0 0 20px rgb(0 0 0 / 25%);
 }

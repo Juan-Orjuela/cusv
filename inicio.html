@@ -57,24 +57,34 @@
     <div id="proyectos-destacados">
       <div class="carrusel ">
         <div class="proyecto">
-          <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
-          <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          <a href="proyecto.html">
+            <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
+            <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          </a>
         </div>
         <div class="proyecto">
-          <img class="fondo" src="img/inicio-ejemplo.jpg" alt="Proyecto">
-          <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          <a href="proyecto.html">
+            <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
+            <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          </a>
         </div>
         <div class="proyecto">
-          <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
-          <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          <a href="proyecto.html">
+            <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
+            <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          </a>
         </div>
         <div class="proyecto">
-          <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
-          <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          <a href="proyecto.html">
+            <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
+            <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          </a>
         </div>
         <div class="proyecto">
-          <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
-          <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          <a href="proyecto.html">
+            <img class="fondo" src="img/proyecto-ejemplo.jpg" alt="Proyecto">
+            <img src="img/logo-luar.png" alt="Logo Proyecto" class="logo">
+          </a>
         </div>
       </div>
       <div class="slider-progress">
@@ -84,9 +94,11 @@
     <div id="info-inicio">
       <div class="bloque-rojo">
         <h1>Una nueva historia comienza aquí</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor i</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+          suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor i</p>
         <a class="btn btn-alt" href="mapa.html">Iniciar</a>
-        
+
       </div>
       <span class="fondo-rojo"></span>
     </div>
@@ -108,70 +120,69 @@
 
   <script>
     $(document).ready(function () {
-     
-//Barra de progreso
-var time = 8;
-var $bar,
-      $slick,
-      isPause,
-      tick,
-      percentTime;
-  
-  $slick = $('.carrusel');
-  $slick.slick({
-    fade: true,
-    dots: true,
-    dotsClass: 'custom_paging',
-    customPaging: function (slider, i) {
-        return  (i + 1) + '/' + slider.slideCount;
-    }
-});
-  
-  $bar = $('.slider-progress .progress');
-  
-  $('.slider-wrapper').on({
-    mouseenter: function() {
-      isPause = true;
-    },
-    mouseleave: function() {
-      isPause = false;
-    }
-  })
-  
-  function startProgressbar() {
-    resetProgressbar();
-    percentTime = 0;
-    isPause = false;
-    tick = setInterval(interval, 10);
-  }
-  
-  function interval() {
-    if(isPause === false) {
-      percentTime += 1 / (time+0.1);
-      $bar.css({
-        width: percentTime+"%"
-      });
-      if(percentTime >= 100)
-        {
-          $slick.slick('slickNext');
-          startProgressbar();
-        }
-    }
-  }
-  
-  
-  function resetProgressbar() {
-    $bar.css({
-     width: 0+'%' 
-    });
-    clearTimeout(tick);
-  }
-  
-  startProgressbar();
 
-  $slick.on('beforeChange', startProgressbar);
- //Fin
-});
+      //Barra de progreso
+      var time = 8;
+      var $bar,
+        $slick,
+        isPause,
+        tick,
+        percentTime;
+
+      $slick = $('.carrusel');
+      $slick.slick({
+        fade: true,
+        dots: true,
+        dotsClass: 'custom_paging',
+        customPaging: function (slider, i) {
+          return (i + 1) + '/' + slider.slideCount;
+        }
+      });
+
+      $bar = $('.slider-progress .progress');
+
+      $('.slider-wrapper').on({
+        mouseenter: function () {
+          isPause = true;
+        },
+        mouseleave: function () {
+          isPause = false;
+        }
+      })
+
+      function startProgressbar() {
+        resetProgressbar();
+        percentTime = 0;
+        isPause = false;
+        tick = setInterval(interval, 10);
+      }
+
+      function interval() {
+        if (isPause === false) {
+          percentTime += 1 / (time + 0.1);
+          $bar.css({
+            width: percentTime + "%"
+          });
+          if (percentTime >= 100) {
+            $slick.slick('slickNext');
+            startProgressbar();
+          }
+        }
+      }
+
+
+      function resetProgressbar() {
+        $bar.css({
+          width: 0 + '%'
+        });
+        clearTimeout(tick);
+      }
+
+      startProgressbar();
+
+      $slick.on('beforeChange', startProgressbar);
+      //Fin
+    });
   </script>
 </body>
 

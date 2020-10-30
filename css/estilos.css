@@ -410,6 +410,7 @@ Particulares
     left: 0;
     border-right: 1px solid white;
     padding: 40px;
+    pointer-events: none;
 }
 
 #inicio #info-inicio .bloque-rojo {
@@ -417,6 +418,7 @@ Particulares
     position: relative;
     padding: 30px;
     box-sizing: border-box;
+    pointer-events: initial;
 }
 
 #inicio #info-inicio .fondo-rojo {
@@ -2097,4 +2099,26 @@ body#favoritos .fav .encabezado {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+body#favoritos .slick-track {
+    min-height: 40vh;
+}
+body#favoritos .slick-list:before {
+    content: "No tienes proyectos favoritos seleccionados";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 200px;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #b7b7b7;
+    z-index: -1;
+}
+.fav {
+    background-color: white;
+}
+.slick-slide:focus {
+    outline: none
 }

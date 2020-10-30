@@ -110,10 +110,10 @@
                         src="img/arquitectura/mini-galeria-arq-3.jpg" alt="Pie de página"></a></li>
                   <li><a href="img/arquitectura/galeria-arq-4.jpg" data-caption="Pie de página"><img
                         src="img/arquitectura/mini-galeria-arq-4.jpg" alt="Pie de página"></a></li>
-                        <li><a href="img/arquitectura/galeria-arq-1.jpg" data-caption="Pie de página"><img
-                          src="img/arquitectura/mini-galeria-arq-1.jpg" alt="Pie de página"></a></li>
-                    <li><a href="img/arquitectura/galeria-arq-2.jpg" data-caption="Pie de página"><img
-                          src="img/arquitectura/mini-galeria-arq-2.jpg" alt="Pie de página"></a></li>
+                  <li><a href="img/arquitectura/galeria-arq-1.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-1.jpg" alt="Pie de página"></a></li>
+                  <li><a href="img/arquitectura/galeria-arq-2.jpg" data-caption="Pie de página"><img
+                        src="img/arquitectura/mini-galeria-arq-2.jpg" alt="Pie de página"></a></li>
                 </ul>
               </div>
             </div>
@@ -149,26 +149,28 @@
                 <li>
                   <h3>Piscina</h3>
                   <div class="iframe-wrapper">
-                    <div data-recorrido="https://mashousecaujaral.co/recorrido_caujaral/recorridos/apto-3/" class="iframe-placeholder">
+                    <div data-recorrido="https://mashousecaujaral.co/recorrido_caujaral/recorridos/apto-3/"
+                      class="iframe-placeholder">
                       <img src="http://vivenatura.co/wp-content/uploads/2020/07/preview-360.jpg" alt="Recorrido 360">
                       <span>VER TOUR VIRTUAL</span>
                     </div>
                     <iframe class="your-iframe" src=""></iframe>
                   </div>
-                
+
                 </li>
                 <li>
                   <h3>Canchas múltiples</h3>
                   <div class="iframe-wrapper">
-                    <div data-recorrido="https://mashousecaujaral.co/recorrido_caujaral/recorridos/apto-4/" class="iframe-placeholder">
+                    <div data-recorrido="https://mashousecaujaral.co/recorrido_caujaral/recorridos/apto-4/"
+                      class="iframe-placeholder">
                       <img src="http://vivenatura.co/wp-content/uploads/2020/07/preview-360.jpg" alt="Recorrido 360">
                       <span>VER TOUR VIRTUAL</span>
                     </div>
                     <iframe class="your-iframe" src=""></iframe>
                   </div>
-                
+
                 </li>
-                
+
               </ul>
             </div>
           </div>
@@ -204,7 +206,7 @@
       menu: '#cus-menu',
       fitToSection: false,
       autoScrolling: false,
-        licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
+      licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE'
     });
   </script>
   <script type="text/javascript">
@@ -237,14 +239,16 @@
   </script>
   <script>
     //Recorridos
-
-    document.querySelector('.iframe-placeholder').addEventListener('click', function() {
-        var iframeSrc = this.dataset.recorrido;
-        var yourIframe = this.nextElementSibling;
+    const recorridos = document.querySelectorAll(".iframe-placeholder");
+    for (let i = 0; i < recorridos.length; i++) {
+      recorridos[i].addEventListener("click", function () {
+        var iframeSrc = recorridos[i].dataset.recorrido;
+        var yourIframe = recorridos[i].nextElementSibling;
         yourIframe.src = iframeSrc;
-        this.parentNode.removeChild(this);
-    }, false);
-</script>
+        recorridos[i].parentNode.removeChild(recorridos[i]);
+      });
+    }
+  </script>
 </body>
 
 </html>

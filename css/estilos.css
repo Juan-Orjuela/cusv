@@ -2122,3 +2122,16 @@ body#favoritos .slick-list:before {
 .slick-slide:focus {
     outline: none
 }
+.grid-galeria a{
+    position: relative;
+    padding-top: 50%;
+    padding-bottom: 50%;
+}
+.grid-galeria a img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

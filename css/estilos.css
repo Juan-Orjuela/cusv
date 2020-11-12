@@ -760,6 +760,7 @@ Particulares
     transform: translateY(calc(100% - 66px));
     cursor: pointer;
     transition: all .8s ease;
+    width: 25%;
 }
 
 .secciones h2 {
@@ -2104,7 +2105,7 @@ body#favoritos .slick-track {
     min-height: 40vh;
 }
 body#favoritos .slick-list:before {
-    content: "No tienes proyectos favoritos seleccionados";
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;

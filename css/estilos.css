@@ -2136,3 +2136,128 @@ body#favoritos .slick-list:before {
     height: 100%;
     object-fit: cover;
 }
+/*Ajustes CSS nov*/
+/*Inicio*/
+#inicio #info-inicio {
+    display: flex;
+}
+#inicio #info-inicio .bloque-rojo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+#inicio #info-inicio h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 15px 30px;
+}
+#inicio #info-inicio .bloque-rojo p {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.2;
+}
+#inicio #info-inicio .fondo-rojo {
+    bottom: 40px;
+}
+#inicio #info-inicio .btn {
+     font-size: 1.6rem;
+     padding-left: 1.5em;
+     padding-right: 1.5em;
+     max-width: 200px;
+}
+/*Mapa*/
+.infobox-wrapper .cus-box,
+.infobox-wrapper {
+    min-width: initial;
+    width: 250px !important;
+    
+}
+/*Varios*/
+.breadcrumb-cont {
+    white-space: nowrap
+}
+/*Arquitectura*/
+.bloque-arquitectura .info-plantas p {
+    font-size: .875rem;
+}
+#plantas-seccion .carrusel {
+    background: #e1e1e1;
+    margin-top: 120px;
+    padding: 0;
+
+}
+
+#plantas-seccion .carrusel .slick-slide {
+    height: calc(100vh - 300px) !important;
+    position: relative;
+
+}
+#plantas-seccion .carrusel .slick-slide img {
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit:contain;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Zonas comunes*/
+.bloque-zonas .info-galeria ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bloque-zonas .info-galeria ul li {
+    width: 50%;
+}
+/*Apartamento*/
+.ficha-resumen h2:after {
+    content: "2";
+    font-size: .6em;
+    position: relative !important;
+    top: -.5em!important;
+    left: 0!important;
+}
+.ficha-resumen h2.linea-bt::after {
+    
+    width: initial;
+    max-width: initial;
+    height: initial;
+    background: initial;
+}
+.ficha-resumen h2.linea-bt::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    bottom: 0px;
+    width: 180px;
+    max-width: 50%;
+    height: 1px;
+    background: rgb(226, 6, 19);
+}
+.apto-detalle .info-principal .head-proyecto h2 {
+    line-height: 1;
+}
+.apto-detalle h1:after {
+    content: "2";
+    font-size: .6em;
+    position: relative ;
+    top: -.5em;
+}
+.apto-detalle #galeria .slick-slide {
+    height: calc(100vh - 400px) !important;
+    position: relative;
+}
+.apto-detalle #galeria .slick-slide img {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.apto-detalle .carru-res {
+    justify-content: flex-start;
+}

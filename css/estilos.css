@@ -564,6 +564,7 @@ Particulares
 .slick-dotted.slick-slider {
     padding-left: 0;
 }
+
 .fav {
     box-shadow: 0 0 30px rgb(0 0 0 / 20%);
     list-style-type: none;
@@ -1710,6 +1711,7 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     left: 40px;
     top: 40px;
     min-width: 400px;
+    z-index: 5;
 }
 
 .pag-apartamentos .col-filtros {
@@ -2382,7 +2384,7 @@ body.map-google .contenedor-filtros {
     left: 40px;
 }
 
-@media screen and (max-height: 860px ) {
+@media screen and (max-height: 900px ) {
     /*Mapa*/ .search-box {
     }
 
@@ -2394,6 +2396,18 @@ body.map-google .contenedor-filtros {
 
     #form-map .campos .form-group {
         padding-bottom: 10px;
+    }
+
+    /*Apartamentos*/
+    .ficha-resumen .planta {
+        width: 100%;
+        height: 250px;
+        position: relative;
+    }
+
+    .ficha-resumen .planta img {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -2526,32 +2540,58 @@ body.map-google .contenedor-filtros {
 
     /*Favoritos*/
     /*Proyecto*/
-    .secciones li h2{
+    .secciones li h2 {
         font-size: 1.2rem;
     }
+
     .secciones li {
         padding: 15px;
         border-radius: 15px 15px 0 0;
         transform: translateY(calc(100% - 48px));
     }
 
-
     /*Ubicacion*/
     #mapa-ubicacion {
-    
-    max-height: calc(100vh - 50px);
-    
-}
+        max-height: calc(100vh - 50px);
+    }
+
     /*Arquitectura*/
     /*Zonas*/
     /*Apartamentos*/
     /*Apto detalle*/
+    .apto-detalle .contenedor {
+        margin-top: 50px;
+    }
+
+    .apto-detalle #seccion-1 {
+        min-height: calc(100vh - 50px);
+    }
+
+    .apto-detalle .encabezado-apto .fav-ico {
+        top: 60px
+    }
+
+    /*Resumen*/
+    #resumen .contenedor .col-izq {
+        padding-left: 15px;
+    }
+
+    #resumen h1 {
+        margin-left: 0;
+    }
+
+    .info-resumen h3 {
+        font-size: 1rem;
+    }
+
+    .info-resumen .tag {
+        font-size: .875rem;
+    }
 }
 
 /*Mayores a 993 - 1200*/
 @media screen and (max-width: 1200px) {
-    /*Index*/ /*Registro-2*/ /*Inicio*/ 
-    /*Mapa*/ .search-box {
+    /*Index*/ /*Registro-2*/ /*Inicio*/ /*Mapa*/ .search-box {
         max-width: 260px;
     }
 
@@ -2562,57 +2602,96 @@ body.map-google .contenedor-filtros {
         top: 60px;
         left: 10px;
     }
+
     body.map-google .contenedor-filtros {
         top: 110px;
         bottom: initial;
         max-height: calc(100vh - 130px);
         overflow: auto;
     }
+
     #form-map {
         box-shadow: none;
     }
-    
+
     /*Favoritos*/
     .fav {
         margin: 10px;
         box-shadow: 0 0 10px rgb(0 0 0 / 10%);
     }
+
     .slick-dots {
         max-width: 90vw;
     }
+
     /*Proyecto*/
     .secciones li {
         margin: 0 5px;
     }
+
     /*Ubicacion*/
     body#ubicacion .bloque-ubicacion {
         margin: 40px 0 0;
     }
-    
+
     .breadcrumb-cont .breadcrumb {
-        
         display: flex;
         flex-wrap: nowrap;
         overflow: scroll;
-        
     }
+
     .breadcrumb li {
         white-space: nowrap
     }
+
     body#ubicacion .encabezado-ubicacion {
         max-width: 320px;
     }
+
     /*Arquitectura*/
     body#arquitectura #fullpage, body#zonas #fullpage {
-    margin-left: 350px;
-    margin-top: 180px;
-}
-.bloque-arquitectura, .bloque-zonas {
-    max-width: 300px;
-}
+        margin-left: 350px;
+        margin-top: 180px;
+    }
+
+    .bloque-arquitectura, .bloque-zonas {
+        max-width: 300px;
+    }
+
     /*Zonas*/
     /*Apartamentos*/
     /*Apto detalle*/
+    body.apto-detalle #seccion-1 .col-md-3 {
+        -ms-flex: 0 0 30%;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+
+    body.apto-detalle #seccion-1 .col-md-6 {
+        -ms-flex: 0 0 40%;
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .apto-detalle .tipos-planta img {
+        width: 100%;
+        max-height: initial;
+        height: auto;
+    }
+
+    /*Resumen*/
+    #resumen .col-md-3 {
+        -ms-flex: 0 0 35%;
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    #resumen .col-md-9 {
+        -ms-flex: 0 0 65%;
+        flex: 0 0 65%;
+        max-width: 65%;
+    }
+    
 }
 
 /*Mayores a 769 - 992*/
@@ -2628,7 +2707,9 @@ body.map-google .contenedor-filtros {
     h3 {
         font-size: 1.2rem;
     }
-    /*Index*/ html {
+
+    /*Index*/
+    html {
         font-size: 14px;
     }
 
@@ -2659,37 +2740,42 @@ body.map-google .contenedor-filtros {
     }
 
     /*Mapa*/
-    
     /*Favoritos*/
     .fav {
         margin: 5px;
         box-shadow: 0 0 5px rgb(0 0 0 / 10%);
     }
+
     /*Proyecto*/
     .secciones li {
         margin: 0;
         min-width: 25%;
         transform: translateY(calc(100% - 40px));
     }
+
     .secciones li h2 {
         font-size: 1rem;
     }
+
     .secciones .btn {
         font-size: .875rem;
     }
+
     /*Ubicacion*/
-    body#ubicacion .bloque-ubicacion,
-    body#ubicacion .encabezado-ubicacion {
+    body#ubicacion .bloque-ubicacion, body#ubicacion .encabezado-ubicacion {
         max-width: 260px;
     }
+
     body#ubicacion .bloque-ubicacion h1 {
         font-size: 2rem;
         margin: 0;
     }
+
     /*Arquitectura*/
     .grid-galeria ul li {
         padding: 5px;
     }
+
     #cus-menu {
         display: flex;
         border-left: none;
@@ -2699,42 +2785,78 @@ body.map-google .contenedor-filtros {
         left: 50%;
         transform: translateX(-50%);
         background-color: white;
-        
     }
+
     #cus-menu li {
         padding: 0 0 8px;
         flex-grow: 2;
         text-align: center;
     }
+
     #cus-menu li.active:before {
-    content: "";
-    position: absolute;
-    height: 4px;
-    background: red;
-    box-sizing: border-box;
-    width: 100%;
-    left: 0;
-    bottom: -2px;
-}
-.bloque-arquitectura .info, .bloque-zonas .info {
-    margin-top: 30px;
-}
-.bloque-arquitectura .info h2, .bloque-zonas .info h2 {
-    font-size: 1.5rem;
-}
-body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
-    margin-top: 85px;
-    top: 0;
-    margin-bottom: 30px;
-}
+        content: "";
+        position: absolute;
+        height: 4px;
+        background: red;
+        box-sizing: border-box;
+        width: 100%;
+        left: 0;
+        bottom: -2px;
+    }
+
+    .bloque-arquitectura .info, .bloque-zonas .info {
+        margin-top: 30px;
+    }
+
+    .bloque-arquitectura .info h2, .bloque-zonas .info h2 {
+        font-size: 1.5rem;
+    }
+
+    body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
+        margin-top: 85px;
+        top: 0;
+        margin-bottom: 30px;
+    }
+
     /*Zonas*/
     /*Apartamentos*/
+    .pag-apartamentos .col-filtros {
+        min-width: 300px;
+        width: 300px;
+    }
+
+    .pag-apartamentos .col-resultados {
+        max-width: calc( 100vw - 300px);
+        margin: 0 auto;
+    }
+
+    .pag-apartamentos .col-resultados .caja-centrar {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
     /*Apto detalle*/
+    .apto-detalle .info-der .areas, .apto-detalle .info-principal {
+        margin-top: 0;
+    }
+
+    .apto-detalle #seccion-1 {
+        padding-top: 100px;
+    }
+
+    .apto-detalle .btn-planta-proyecto a {
+        padding: 0;
+    }
+    /*Resumen*/
+    #resumen .carru-res {
+        max-width: 360px;
+    }
 }
 
 /*Mayores a 577 - 768*/
 @media screen and (max-width: 768px) {
-    /*Index*/ /*Registro-2*/ /*Inicio*/ #inicio #info-inicio {
+    /*Inicio*/ 
+    #inicio #info-inicio {
         width: 100%;
         max-width: initial;
         border-right: 0;
@@ -2804,64 +2926,65 @@ body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
         padding: 0;
         background: transparent;
     }
+
     #form-map {
         background-color: white !important;
         padding-bottom: 15px!important;
     }
+
     #form-map .form-inline {
         display: flex;
-        justify-content:space-around
+        justify-content: space-around
     }
+
     #form-map .form-inline .checkbox {
         margin: 0;
     }
+
     /*Favoritos*/
     /*Proyecto*/
     .nom-proyecto img {
         width: 120px;
     }
+
     .secciones {
         pointer-events: initial;
     }
+
     .secciones ul {
         border-bottom: 0;
         overflow: scroll;
         margin-bottom: 20px;
-       width: 100%;
-        
+        width: 100%;
     }
+
     .secciones li {
         min-width: 42%;
         width: 42%;
         transform: initial;
         margin: 0 5px;
-        background: #ffffff !important;
+        background: rgb(226 6 19 / 0.8) !important;
         border-radius: 15px;
-        color: #e20613;
         display: flex;
         flex-direction: column;
-        justify-content: space-between
+        justify-content: space-between;
     }
+
     .secciones li h2 {
-        color: #e20613 !important;
         text-shadow: none;
     }
-    .secciones li .btn {
-        background-color: #e20613;
-        color: white;
-        
-    }
+
     .encabezado-proyectos {
         left: 15px;
     }
+
     /*Ubicacion*/
     body#ubicacion .encabezado-ubicacion {
         left: 15px;
         margin-left: 0;
-
     }
-    body#ubicacion .bloque-ubicacion,
-    body#ubicacion .encabezado-ubicacion {
+
+    body#ubicacion .bloque-ubicacion, body#ubicacion .encabezado-ubicacion {
         padding: 15px;
         border-radius: 15px;
         max-width: 220px;
@@ -2869,30 +2992,106 @@ body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
 
     /*Arquitectura*/
     body#arquitectura #fullpage, body#zonas #fullpage {
-    margin-left: 0;
-    margin-top: 0;
-}
-.bloque-arquitectura .info, .bloque-zonas .info {
-    display: none;
-}
-body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
-    position: relative;
-    left: 0;
-    max-width: 400px;
-}
-.video-responsive {
-    min-width: 90vw !important;
-    
-}
-#videos-seccion .slick-slide {
-    width: 100% !important
-}
-#videos-seccion .slick-track {
-    min-width: 100% !important
-}
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .bloque-arquitectura .info, .bloque-zonas .info {
+        display: none;
+    }
+
+    body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
+        position: relative;
+        left: 0;
+        max-width: 400px;
+    }
+
+    #arquitectura .video-responsive, #zonas .video-responsive {
+        min-width: 90vw !important;
+    }
+
+    #videos-seccion .slick-slide {
+        width: 100% !important
+    }
+
+    #videos-seccion .slick-track {
+        min-width: 100% !important
+    }
+
     /*Zonas*/
     /*Apartamentos*/
+    .pag-apartamentos .breadcrumb-cont {
+        left: 15px;
+    }
+
+    .pag-apartamentos .breadcrumb-cont .breadcrumb {
+        max-width: 210px;
+    }
+
+    .pag-apartamentos .col-filtros {
+        min-width: 240px;
+        width: 240px;
+        padding: 90px 15px 15px;
+        margin: 0;
+    }
+
+    .pag-apartamentos .col-resultados {
+        max-width: calc( 100vw - 240px);
+        margin: 0 auto;
+        margin: 0;
+    }
+
+    .pag-apartamentos .col-resultados .caja-centrar {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
     /*Apto detalle*/
+    body.apto-detalle #seccion-1 .col-md-3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    body.apto-detalle #seccion-1 .col-md-6 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .apto-detalle .carru-res {
+        flex-direction: column;
+    }
+
+    .apto-detalle .carru-res > li {
+        width: 100%;
+        max-width: 360px;
+        margin: 15px auto;
+    }
+
+    .apto-detalle .encabezado-apto {
+        left: 15px;
+    }
+    /*Resumen*/
+    #resumen .col-md-3 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 4rem;
+    }
+#resumen .tag {
+    font-size: 1rem;
+}
+    #resumen .col-md-9 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    #resumen h1 {
+        margin-top: 2rem;
+    }
 }
 
 /*Mayores a 481 - 576*/
@@ -2937,23 +3136,64 @@ body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
     }
 
     /*Mapa*/
-    .infobox-wrapper .cus-box, .infobox-wrapper,
-    .infobox-wrapper .cus-box .cus-box-img {
+    .infobox-wrapper .cus-box, .infobox-wrapper, .infobox-wrapper .cus-box .cus-box-img {
         min-width: initial;
         width: 220px !important;
     }
+
     /*Favoritos*/
     /*Proyecto*/
     .secciones li {
         min-width: 55%;
         width: 55%;
-       
     }
+
     /*Ubicacion*/
     /*Arquitectura*/
     /*Zonas*/
     /*Apartamentos*/
+    .pag-apartamentos .contenedor > .row {
+        flex-direction: column;
+    }
+
+    .pag-apartamentos .col-filtros {
+        width: 100%;
+    }
+
+    .pag-apartamentos .col-filtros .form-filtros .campos {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pag-apartamentos .col-filtros .form-filtros .campos .form-group {
+        width: 46%;
+        margin: 0 2% 15px;
+    }
+
+    .pag-apartamentos .col-filtros .form-filtros .campos .form-group:last-child {
+        width: 100%;
+        margin-bottom : 0;
+        padding-bottom: 0;
+    }
+
+    .pag-apartamentos .form-group:nth-last-child(2) {
+        border-bottom: 1px solid #bebebe;
+    }
+
+    .pag-apartamentos .col-resultados {
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .pag-apartamentos .breadcrumb-cont .breadcrumb {
+        max-width: 300px;
+    }
+
     /*Apto detalle*/
+    #seccion-1 {
+        padding: 0 30px;
+    }
 }
 
 /*Mayores a 351 - 480*/
@@ -3032,45 +3272,54 @@ body#arquitectura .encabezado-arquitectura, body#zonas .encabezado-zonas {
 
     /*Mapa*/
     /*Favoritos*/
-    #favoritos h1 {
-        font-size: 2rem;
-    }
     /*Proyecto*/
     .secciones li {
         min-width: 68%;
         width: 68%;
-       
     }
+
     /*Ubicacion*/
     body#ubicacion .encabezado-ubicacion {
         left: 0;
         margin-left: 0;
-
     }
-    body#ubicacion .bloque-ubicacion,
-    body#ubicacion .encabezado-ubicacion {
+
+    body#ubicacion .bloque-ubicacion, body#ubicacion .encabezado-ubicacion {
         padding: 15px;
         border-radius: 15px;
         max-width: 200px;
         margin-top: 20px;
     }
+
     body#ubicacion .bloque-ubicacion h2 {
         font-size: 1rem;
     }
+
     /*Arquitectura*/
     /*Zonas*/
     /*Apartamentos*/
+    .pag-apartamentos .breadcrumb-cont {
+        min-width: initial;
+    }
+
+    .pag-apartamentos .col-filtros h3 {
+        font-size: 1rem;
+    }
+
     /*Apto detalle*/
 }
 
 /*Menores a 350*/
 @media screen and (max-width: 350px) {
-    /*Index*/ /*Registro-2*/ /*Inicio*/ 
-    /*Mapa*/ 
-    body.map-google .contenedor-filtros {
+    /*Index*/ /*Registro-2*/ /*Inicio*/ /*Mapa*/ body.map-google .contenedor-filtros {
         width: 240px;
     }
 
-
-    /*Favoritos*/ /*Proyecto*/ /*Ubicacion*/ /*Arquitectura*/ /*Zonas*/ /*Apartamentos*/ /*Apto detalle*/
+    /*Favoritos*/
+    /*Proyecto*/
+    /*Ubicacion*/
+    /*Arquitectura*/
+    /*Zonas*/
+    /*Apartamentos*/
+    /*Apto detalle*/
 }

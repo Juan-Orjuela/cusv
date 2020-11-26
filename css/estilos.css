@@ -887,7 +887,7 @@ Particulares
 
 #mapa .btn-favoritos {
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     bottom: 30px;
     right: 20px;
     background-color: #e20613;

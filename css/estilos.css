@@ -245,7 +245,7 @@ img {
 }
 
 .navbar .usuario a:hover {
-    opacity: 0.7 ;
+    opacity: 0.7;
 }
 
 .navbar .usuario a img {
@@ -264,6 +264,28 @@ a, a:hover {
     color: #e20613;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+    
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #cbcbcb;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #e20613;
+    border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e20613;
+}
+
 /*Formularios*/
 .form-control {
     background: rgb(245, 245, 245);
@@ -278,17 +300,17 @@ a, a:hover {
     box-shadow: rgb(245, 245, 245) 0px 0px 0px 0.2rem;
 }
 
-.custom-control-input:checked~.custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: #e20613;
     background-color: #e20613;
 }
 
-.custom-control-input:focus~.custom-control-label::before {
+.custom-control-input:focus ~ .custom-control-label::before {
     box-shadow: 0 0 0 0.2rem #f5f5f5;
 }
 
-.custom-control-input:focus:not(:checked)~.custom-control-label::before {
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     border-color: #e20613;
 }
 
@@ -500,7 +522,7 @@ Particulares
 }
 
 #inicio .slick-next:hover, #inicio .slick-prev:hover {
-    box-shadow: 0 0 0 5px #e20613 ;
+    box-shadow: 0 0 0 5px #e20613;
 }
 
 #inicio .slick-prev:before, #inicio .slick-next:before {
@@ -695,17 +717,15 @@ Particulares
     opacity: 0;
     transition: opacity .5s ease;
 }
-
 .breadcrumb-cont {
     display: inline;
     width: initial;
 }
 
 .breadcrumb {
-    background: white;
-    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
-    padding: .35rem 1rem;
-    display: inline;
+    padding: 0;
+    background: transparent;
+    display: flex;
 }
 
 .breadcrumb li {
@@ -714,9 +734,16 @@ Particulares
     letter-spacing: 0.075em;
     font-size: 0.875rem;
     color: #575757;
-    display: inline;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
+    padding: .35rem 1rem;
+    background: white;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    max-width: 180px;
+    overflow: hidden;
+    position: relative;
+    
 }
-
 .breadcrumb li a {
     color: #575757;
 }
@@ -726,7 +753,7 @@ Particulares
     text-decoration: none
 }
 
-.breadcrumb-item+.breadcrumb-item::before {
+.breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: 1rem;
     width: 20px;
@@ -1301,14 +1328,16 @@ body#arquitectura #fullpage, body#zonas #fullpage {
 
 .bloque-arquitectura .info, .bloque-zonas .info {
     border: 3px solid #e1e1e1;
-    border-radius: 32px;
+    border-radius: 6px;
     padding: 20px;
     position: relative;
     width: 100%;
     max-width: 400px;
     transition: all .8s ease;
-    margin-top: 7.5vh;
-    margin-bottom: 5vh;
+    margin-top: 30px;
+    max-height: 400px;
+    overflow: auto;
+    max-height: calc(100vh - 420px)
 }
 
 .bloque-arquitectura .info h2, .bloque-zonas .info h2 {
@@ -1710,7 +1739,7 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     position: absolute;
     left: 40px;
     top: 40px;
-    min-width: 400px;
+    min-width: 520px;
     z-index: 5;
 }
 
@@ -1799,7 +1828,8 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
 }
 
 .pag-apartamentos .ficha-resumen .planta a:hover img {
-    transform: scale(1.1)
+    transform:  translateX(-50%) scale(1.2) ;
+    
 }
 
 /*Apto Detallle*/
@@ -1834,7 +1864,7 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     position: relative;
 }
 
-.apto-detalle #seccion-1 >.row > * {
+.apto-detalle #seccion-1 > .row > * {
     padding: 0;
 }
 
@@ -1889,7 +1919,7 @@ body.fp-viewing-fachadas .info-fachadas, body.fp-viewing-videos .info-videos, bo
     height: 45px;
     width: 45px;
     position: absolute;
-    top: 0 ;
+    top: 0;
     left: 0;
     background-position: center;
     background-size: contain;
@@ -2302,8 +2332,8 @@ body#favoritos .slick-list:before {
     content: "2";
     font-size: .6em;
     position: relative !important;
-    top: -.5em!important;
-    left: 0!important;
+    top: -.5em !important;
+    left: 0 !important;
 }
 
 .ficha-resumen h2.linea-bt::after {
@@ -2331,7 +2361,7 @@ body#favoritos .slick-list:before {
 .apto-detalle h1:after {
     content: "2";
     font-size: .6em;
-    position: relative ;
+    position: relative;
     top: -.5em;
 }
 
@@ -2385,8 +2415,7 @@ body.map-google .contenedor-filtros {
 }
 
 @media screen and (max-height: 900px ) {
-    /*Mapa*/ .search-box {
-    }
+    /*Mapa*/ 
 
     #form-map h3 {
         font-size: 1rem;
@@ -2634,15 +2663,8 @@ body.map-google .contenedor-filtros {
         margin: 40px 0 0;
     }
 
-    .breadcrumb-cont .breadcrumb {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: scroll;
-    }
 
-    .breadcrumb li {
-        white-space: nowrap
-    }
+    
 
     body#ubicacion .encabezado-ubicacion {
         max-width: 320px;
@@ -2691,7 +2713,6 @@ body.map-google .contenedor-filtros {
         flex: 0 0 65%;
         max-width: 65%;
     }
-    
 }
 
 /*Mayores a 769 - 992*/
@@ -2847,6 +2868,7 @@ body.map-google .contenedor-filtros {
     .apto-detalle .btn-planta-proyecto a {
         padding: 0;
     }
+
     /*Resumen*/
     #resumen .carru-res {
         max-width: 360px;
@@ -2855,8 +2877,7 @@ body.map-google .contenedor-filtros {
 
 /*Mayores a 577 - 768*/
 @media screen and (max-width: 768px) {
-    /*Inicio*/ 
-    #inicio #info-inicio {
+    /*Inicio*/ #inicio #info-inicio {
         width: 100%;
         max-width: initial;
         border-right: 0;
@@ -2929,7 +2950,7 @@ body.map-google .contenedor-filtros {
 
     #form-map {
         background-color: white !important;
-        padding-bottom: 15px!important;
+        padding-bottom: 15px !important;
     }
 
     #form-map .form-inline {
@@ -3024,9 +3045,7 @@ body.map-google .contenedor-filtros {
         left: 15px;
     }
 
-    .pag-apartamentos .breadcrumb-cont .breadcrumb {
-        max-width: 210px;
-    }
+    
 
     .pag-apartamentos .col-filtros {
         min-width: 240px;
@@ -3073,6 +3092,7 @@ body.map-google .contenedor-filtros {
     .apto-detalle .encabezado-apto {
         left: 15px;
     }
+
     /*Resumen*/
     #resumen .col-md-3 {
         -ms-flex: 0 0 100%;
@@ -3080,15 +3100,18 @@ body.map-google .contenedor-filtros {
         max-width: 100%;
         margin-bottom: 4rem;
     }
-#resumen .tag {
-    font-size: 1rem;
-}
+
+    #resumen .tag {
+        font-size: 1rem;
+    }
+
     #resumen .col-md-9 {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
         margin-bottom: 2rem;
     }
+
     #resumen h1 {
         margin-top: 2rem;
     }
@@ -3173,7 +3196,7 @@ body.map-google .contenedor-filtros {
 
     .pag-apartamentos .col-filtros .form-filtros .campos .form-group:last-child {
         width: 100%;
-        margin-bottom : 0;
+        margin-bottom: 0;
         padding-bottom: 0;
     }
 
@@ -3186,9 +3209,7 @@ body.map-google .contenedor-filtros {
         margin: 0 auto;
     }
 
-    .pag-apartamentos .breadcrumb-cont .breadcrumb {
-        max-width: 300px;
-    }
+    
 
     /*Apto detalle*/
     #seccion-1 {

@@ -3648,3 +3648,21 @@ body.map-google .contenedor-filtros {
     /*Apartamentos*/
     /*Apto detalle*/
 }
+/*Ajuste bloque de info*/
+@media screen and (min-width: 768px) {
+    .bloque-arquitectura .info, .bloque-zonas .info {
+        max-height: calc(100vh - 420px);
+        overflow: auto;
+
+    }
+}
+
+@media screen and (min-width: 768px) and (max-height: 800px){
+    #cus-menu {
+        bottom: 0;
+    }
+    .bloque-arquitectura .info, .bloque-zonas .info {
+        margin-top: 10px;
+        
+    }
+}

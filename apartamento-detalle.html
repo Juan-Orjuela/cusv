@@ -412,7 +412,16 @@
     });
   </script>
   <script>
-    
+    //Recorridos
+    const recorridos = document.querySelectorAll(".iframe-placeholder");
+    for (let i = 0; i < recorridos.length; i++) {
+      recorridos[i].addEventListener("click", function () {
+        var iframeSrc = recorridos[i].dataset.recorrido;
+        var yourIframe = recorridos[i].nextElementSibling;
+        yourIframe.src = iframeSrc;
+        recorridos[i].parentNode.removeChild(recorridos[i]);
+      });
+    }
   </script>
 </body>
 
